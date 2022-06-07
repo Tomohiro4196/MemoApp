@@ -1,11 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { string } from 'prop-types';
+import { string, shape } from 'prop-types';
+import { defaultProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
 
 export default function AddBottom(props) {
-  const { children } = props;
+  const { children, style } = props;
   return (
-    <View style={styles.addBottom}>
+    <View style={[styles.addBottom, style]}>
       <Text style={styles.addBottomLabel}>{ children }</Text>
     </View>
   );
@@ -13,11 +14,16 @@ export default function AddBottom(props) {
 
 AddBottom.propTypes = {
   children: string.isRequired,
+  style: shape(),
+};
+
+AddBottom.defaultProps = {
+  style: null,
 };
 
 const styles = StyleSheet.create({
   addBottom: {
-    backgroundColor: 'skyblue',
+    backgroundColor: '#467FD3',
     width: 64,
     height: 64,
     borderRadius: 32,

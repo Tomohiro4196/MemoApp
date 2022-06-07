@@ -1,25 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import AppBar from './src/components/AppBar';
-import MemoList from './src/components/Memolist';
-import AddBottom from './src/components/addBottom';
+
+import MemoListScr from './src/screens/MemoListScreen';
+import MemoDetailPage from './src/screens/MemoDetailPage';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <AppBar />
-
-      <MemoList />
-
-      <AddBottom>+</AddBottom>
-
-    </View>
+    <MemoDetailPage />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#f0f4f8',
-  },
-});
