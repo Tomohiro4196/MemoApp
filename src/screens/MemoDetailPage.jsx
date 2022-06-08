@@ -24,7 +24,7 @@ export default function MemoDetailPage() {
         </View>
       </View>
 
-      <AddBottom style={{ top: 160, bottom: 'auto' }}>+</AddBottom>
+      <AddBottom style={{ top: 160, bottom: 'auto' }} name="edit-2" />
     </View>
   );
 }

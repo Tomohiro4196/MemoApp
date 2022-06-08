@@ -1,24 +1,27 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import { string, shape } from 'prop-types';
+import { View, StyleSheet } from 'react-native';
+import { string, shape, number } from 'prop-types';
 import { defaultProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
+import { Feather } from '@expo/vector-icons';
 
 export default function AddBottom(props) {
-  const { children, style } = props;
+  const { style, name, size } = props;
   return (
     <View style={[styles.addBottom, style]}>
-      <Text style={styles.addBottomLabel}>{ children }</Text>
+      <Feather name={name} size={size} color="white" />
     </View>
   );
 }
 
 AddBottom.propTypes = {
-  children: string.isRequired,
   style: shape(),
+  name: string.isRequired,
+  size: number,
 };
 
 AddBottom.defaultProps = {
   style: null,
+  size: 25,
 };
 
 const styles = StyleSheet.create({

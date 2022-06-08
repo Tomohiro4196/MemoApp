@@ -10,7 +10,7 @@ export default function MemoListScr() {
     <View style={styles.container}>
       <AppBar />
       <MemoList />
-      <AddBottom>+</AddBottom>
+      <AddBottom name="plus" />
     </View>
 
   );
