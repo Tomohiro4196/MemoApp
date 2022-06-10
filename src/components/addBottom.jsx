@@ -8,8 +8,9 @@ import Icon from './icon';
 export default function AddBottom(props) {
   const { style, name, size } = props;
   return (
+    // eslint-disable-next-line no-sequences
     <View style={[styles.addBottom, style]}>
-      <Icon name="plus" size={40} color="white" />
+      <Icon name={name} size={size} color="white" />
     </View>
   );
 }
@@ -22,7 +23,7 @@ AddBottom.propTypes = {
 
 AddBottom.defaultProps = {
   style: null,
-  size: 25,
+  size: 35,
 };
 
 const styles = StyleSheet.create({
