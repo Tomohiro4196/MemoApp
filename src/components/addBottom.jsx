@@ -2,13 +2,14 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { string, shape, number } from 'prop-types';
 import { defaultProps } from 'react-native-web/dist/cjs/modules/forwardedProps';
-import { Feather } from '@expo/vector-icons';
+
+import Icon from './icon';
 
 export default function AddBottom(props) {
   const { style, name, size } = props;
   return (
     <View style={[styles.addBottom, style]}>
-      <Feather name={name} size={size} color="white" />
+      <Icon name="plus" size={40} color="white" />
     </View>
   );
 }
