@@ -7,7 +7,7 @@ import {
 import AppBar from '../components/AppBar';
 import AddBottom from '../components/addBottom';
 
-export default function MemoInputSrc() {
+export default function MemoEditSrc() {
   return (
     <KeyboardAvoidingView style={styles.container} behavior="height">
       <AppBar />
